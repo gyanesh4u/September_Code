@@ -16,4 +16,14 @@ public class LoginTest extends BaseTest {
 		Assert.assertEquals(driver.getTitle(), "OrangeHRM");
 		ReportManager.getTest().info("Logged In successfully.....");
 	}
+
+	@Test
+	public void loginTitleTest() {
+		LoginPage lp = new LoginPage(driver);
+		String title = lp.loginTitle();
+		ReportManager.getTest().info("Getting Title.....");
+		System.out.println(title);
+		Assert.assertEquals(title, "OrangeHRM");
+		ReportManager.getTest().info("Title Matched.....");
+	}
 }

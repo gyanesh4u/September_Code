@@ -34,4 +34,8 @@ public class LoginPage {
 		password.sendKeys(pwd);
 		loginBtn.click();
 	}
+
+	public String loginTitle() {
+		return driver.getTitle();
+	}
 }
